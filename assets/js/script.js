@@ -26,8 +26,8 @@ $(function () {
 
   // COMPARE HOUR OF ROW TO CURRENT HOUR, SET COLORS //
 
-  // var thisHour = today.format('H'); // get hour in 24-hour format
-  var thisHour = '11'; // used for testing as I coded after 5pm
+  var thisHour = today.format('H'); // get hour in 24-hour format
+  // var thisHour = '11'; // used for testing as I coded after 5pm
 
   $('.time-block').each(function() {
     var blockId = $(this).attr('id');
