@@ -4,7 +4,7 @@ $(function () {
   $('#currentDay').text(today.format('dddd, MMMM D')); // show the current day on the page
   var scheduleEl = $('#schedule'); // the schedule area of the page, which I added to the HTML
 
-  
+
   // SET AND GET FROM LOCAL STORAGE //
 
   // Save button click event //
@@ -20,14 +20,14 @@ $(function () {
     var blockId = $(this).attr('id'); // for each time block, get the current hour-xx and set as the blockId
     var savedText = localStorage.getItem(blockId); // first get any local storage
     if (savedText !== null) {
-      $(this).find('.description').val(savedText); // if there's nothing saved, 
+      $(this).find('.description').val(savedText); // if there is some text from local storage, display it in the row text description
     }
   })
 
   // COMPARE HOUR OF ROW TO CURRENT HOUR, SET COLORS //
 
-  var thisHour = today.format('H'); // get hour in 24-hour format
-  // var thisHour = '11'; // used for testing as I coded after 5pm
+  // var thisHour = today.format('H'); // get hour in 24-hour format
+  var thisHour = '11'; // used for testing as I coded after 5pm
 
   $('.time-block').each(function() {
     var blockId = $(this).attr('id');
